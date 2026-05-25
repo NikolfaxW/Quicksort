@@ -18,8 +18,8 @@ int partitionRight(vector<int>& arr, int low, int high) {
     for (int j = low; j < high; j++) {
         // if current element is smaller than pivot
         if (arr[j] < pivot) {
-            i++;
-            swap(arr[i], arr[j]);
+            i++; //moves i boundary between smaller and bigger elements
+            swap(arr[i], arr[j]); //ensures there are only bigger elements on the right
         }
     }
     // put pivot into correct position
@@ -54,6 +54,7 @@ void quickSort(vector<int> &arr) {
 // Random-like data.
 // Random distribution tends to produce relatively balanced partitions, even though pivot is always the last element.
 // This leads to average-case behavior.
+//Asymptotická časová složitost -->O(nlog(n))
 void bestCaseTest() {
     vector<int> arr;
 
@@ -84,7 +85,7 @@ void bestCaseTest() {
 // Already sorted array
 // In that case the partition are unevenly balanced due to the pivot being always chosen the largest.
 // Sorting some leads to many ticks.
-// Time complexity --> O(n^2), where n is the number of elements.
+//Asymptotická časová složitost--> O(n^2), where n is the number of elements.
 void worstCaseTest() {
     vector<int> arr;
 
