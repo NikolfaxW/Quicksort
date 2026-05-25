@@ -11,7 +11,7 @@ bool DoShowArrays = true;
 int arraySizes = 100;
 
 // Partition function - is used in the quick sort for finding a pivot
-//Another partition function variant, where the right border is chosen as pivot
+//Partition function variant, where the right border is chosen as pivot
 int partitionRight(vector<int>& arr, int low, int high) {
     int pivot = arr[high]; //Set the right border as pivot
     int i = low - 1;
